@@ -1,18 +1,6 @@
-<h1>{{ title }}</h1>
-<h1>My age is: {{ age }} </h1>
-
-<p>{{ myFunction(true) }} </p>
-
-<p>{{ myFunction(false) }} </p>
-
-<h2>My name is {{person.name}} and my age is {{person.age}} and im taking {{person.course}}</h2>
-
-<p *ngFor="let color of colors">{{color}} </p>
-
-<div *ngFor="let person of people">
-  <h1>Name: {{person.name}}</h1>
-  <h3>Age: {{person.age}}</h3>
-  <p>Course: {{person.course}}</p>
+<div class="nav">
+  <a routerLink="/">Home</a>
+  <a routerLink="/todo">Todo</a>
 </div>
 
-<h3>My favorite color is {{colors[0]}} but {{colors[2]}} is dope as well</h3>
+<router-outlet></router-outlet>
