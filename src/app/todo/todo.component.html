@@ -22,6 +22,7 @@
 
 <div class="trash">
   <h2>Trash: </h2>
+  <button (click)="emptyTodoTrash()">Empty</button>
   <ul>
     <ng-container *ngFor="let todo of todos">
       <li *ngIf="todo.isDeleted">
