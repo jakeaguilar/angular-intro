@@ -1,0 +1,20 @@
+/* .characters{
+    display: flex;
+    flex: 1;
+
+} */
+
+.characters .character {
+    display: inline-flex;
+    flex-direction: column;
+    width: 30%;
+    padding: 20px;
+}
+
+ .character{
+    text-align: center;
+}
+
+.character img{
+    width: 100%;
+}
