@@ -13,7 +13,7 @@ export const CHARACTERS: CharacterInterface[] = [
         id: 2, 
         name: 'Peter\'s Wife',
         image: 'https://a1cf74336522e87f135f-2f21ace9a6cf0052456644b80fa06d4f.ssl.cf2.rackcdn.com/images/characters/p-family-guy-alex-borstein.jpg',
-        type: 'Villian', 
+        type: 'Villain', 
         abilities: ['Mind control over Peter'], 
         description: 'Can control Peterm with just a look'
     },
@@ -45,7 +45,7 @@ export const CHARACTERS: CharacterInterface[] = [
         id: 6, 
         name: 'Sasuke', 
         image: 'https://i.ytimg.com/vi/19s0vIeJthA/maxresdefault.jpg',
-        type: 'Villian', 
+        type: 'Villain', 
         abilities: ['Byakugan', 'Rinnegan'], 
         description: 'Itachi\'s younger brother.'
     }
