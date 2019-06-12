@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
 import { AmiiboInterface } from '../interfaces/amiibo-interface';
+import { AmiiboService } from '../services/amiibo.service';
+
 
 @Component({
   selector: 'app-individual-amiibo',
@@ -10,9 +12,19 @@ import { AmiiboInterface } from '../interfaces/amiibo-interface';
 })
 export class IndividualAmiiboComponent implements OnInit {
 
-  constructor(private router: ActivatedRoute) { }
+  constructor(private router: ActivatedRoute, private amiiboService: AmiiboService) { }
+
+  amiibo: AmiiboInterface;
+
+  setAmiibo() {
+    const id: string = this.router.snapshot.paramMap.get('id');
+    return this.amiiboService.getAmiibo(id).subscribe((response: any) => this.amiibo = response.amiibo);
+
+  }
 
   ngOnInit() {
+    this.setAmiibo();
+    // console.log(this.amiibo);
   }
 
 }
