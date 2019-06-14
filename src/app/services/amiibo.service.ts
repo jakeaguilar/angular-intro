@@ -27,9 +27,16 @@ export class AmiiboService {
     return amiibosFromApi;
   }
 
-  getAmiibo(id: string): Observable<Object> {
-    return this.api.get(`amiibo/?id=${id}`)
-
+  getFilteredAmiibos(filter: object): Observable<Object> {
+    const key = Object.keys(filter)[0];
+    const value = filter[key];
+    return this.api.get(`amiibo/?${key}=${value}`);
   }
+
+  getAmiibo(id: string) {
+    return this.api.get(`amiibo/?id=${id}`)
+  }
+
+  
 
 }
