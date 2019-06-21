@@ -55,7 +55,7 @@ export class AmiibosComponent implements OnInit {
 
    const filter = {type} || {amiiboSeries} || {gameSeries};
 
-   this.amiiboService.getFilteredAmiibos(filter).subscribe(response => console.log(response));
+   this.amiiboService.getFilteredAmiibos(filter).subscribe((response: any) => this.amiibos = response);
  }
 
  ngOnInit() {

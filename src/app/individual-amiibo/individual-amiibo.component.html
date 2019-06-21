@@ -1,8 +1,8 @@
 <div class="amiibo">
   <div>
     <h1>{{amiibo?.name}}</h1>
-    <p>Amiibo Series: <a routerLink="/amiibos">{{amiibo?.amiiboSeries}}</a></p>
-    <p>Game Series: <a routerLink="">{{amiibo?.gameSeries}}</a></p>
+    <p>Amiibo Series: <a routerLink="/amiibos" [queryParams]="{amiiboSeries: amiibo}">{{amiibo?.amiiboSeries}}</a></p>
+    <p>Game Series: <a routerLink="/amiibos" [queryParams]="{ gameSeries: amiibo}">{{amiibo?.gameSeries}}</a></p>
     <p>Type: <a routerLink="/amiibos" [queryParams]="{type: amiibo?.type}">{{amiibo?.type}}</a></p>
     <div>
       <h4>Released</h4>
